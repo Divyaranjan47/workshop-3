@@ -1,8 +1,11 @@
 <template>
   <article class="landing-wrapper">
     <h2>{{ welcomeMsg }}</h2>
-    <p class="app-description">{{ appDesc }}</p>
-
+    <p class="app-description">
+      {{ appDesc }}
+      <a href="https://vuefest-2020.surge.sh/">Know more..</a>
+    </p>
+    <TopSeller />
     <section class="listing-container">
       <p class="browse-by">{{ browseBy }}</p>
       <div class="listing-categories">
@@ -18,8 +21,13 @@
 </template>
 
 <script>
+import TopSeller from "./TopSeller";
+
 export default {
   name: "LandingPage",
+  components: {
+    TopSeller
+  },
   data() {
     return {
       welcomeMsg: "Welcome to Mini Good Read",
@@ -43,13 +51,13 @@ export default {
           page: "/Authors"
         }
       ]
-    }
+    };
   }
 };
 </script>
 <style>
 .landing-wrapper {
-  padding: 12rem 5rem;
+  padding: 5rem;
   text-align: center;
 }
 
@@ -58,9 +66,10 @@ export default {
 }
 
 .landing-wrapper .app-description {
-  padding: 7rem 0 0;
-  font-size: 2.5rem;
+  padding: 3rem 0;
+  font-size: 2rem;
   text-align: center;
+  color: #44576e;
 }
 
 .landing-wrapper .listing-container {

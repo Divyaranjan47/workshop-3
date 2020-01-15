@@ -1,0 +1,41 @@
+[
+    {
+      "id": 1,
+      "title": "You Don't Know JS - part 1",
+      "desc": "The book is a series of books which explores JavaScript types in greater depth",
+      "author": {
+        "id": 1,
+        "name": "Kyle Simpson"
+      },
+      "rating": {
+        "avg": 4,
+        "total": 200
+      }
+    },
+    {
+      "id": 2,
+      "title": "You Don't Know JS - part 2",
+      "desc": "The book is a series of books which explores JavaScript types in greater depth",
+      "author": {
+        "id": 1,
+        "name": "Kyle Simpson"
+      },
+      "rating": {
+        "avg": 3,
+        "total": 300
+      }
+    },
+    {
+      "id": 3,
+      "title": "You Don't Know JS - part 3",
+      "desc": "The book is a series of books which explores JavaScript types in greater depth",
+      "author": {
+        "id": 1,
+        "name": "Kyle Simpson"
+      },
+      "rating": {
+        "avg": 3.5,
+        "total": 176
+      }
+    }
+]
