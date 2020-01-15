@@ -2,7 +2,7 @@
   <div>
     <AppHeader />
     <div>
-    <BookList />
+    Author Description
     </div>
     <AppFooter />
   </div>
@@ -12,14 +12,12 @@
 // @ is an alias to /src
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
-import BookList from "@/components/BookList.vue";
 
 export default {
-  name: "books",
+  name: "authorDescription",
   components: {
     AppHeader,
-    AppFooter,
-    BookList
+    AppFooter
   }
 };
 </script>

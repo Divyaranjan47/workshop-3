@@ -1,7 +1,9 @@
 <template>
   <div>
     <AppHeader />
-    <div>Author Listing</div>
+    <div>
+    <AuthorList />
+    </div>
     <AppFooter />
   </div>
 </template>
@@ -10,12 +12,14 @@
 // @ is an alias to /src
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
+import AuthorList from "@/components/AuthorList.vue";
 
 export default {
   name: "authors",
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    AuthorList
   }
 };
 </script>
