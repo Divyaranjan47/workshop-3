@@ -1,0 +1,15 @@
+{
+    "books":[
+      {
+        "title":"In stock",
+        "desc":"Ship FREE via Fedx Ground Shipping!",
+        "isAvailable": false,
+        "stockDetails":true
+      },
+      {
+        "title":"Need a flexible payment plan? Bob is here to help!",
+        "link":"javascript:void(0)",
+        "linkText":"Explore Financing Options"
+      }
+    ]
+  }
