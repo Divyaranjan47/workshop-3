@@ -6,20 +6,20 @@
 
 <script>
 export default {
-  name: 'AppFooter',
-  data () {
+  name: "AppFooter",
+  data() {
     return {
-      copyright: 'Copyright to VueFest 2020 @ Deloitte'
-    }
+      copyright: "Copyright to VueFest 2020 @ Deloitte"
+    };
   }
-}
+};
 </script>
 
 <style scoped>
 .footer-wrapper {
   display: flex;
   justify-content: center;
-  padding: 1rem 5rem;
+  padding: 3rem 5rem;
   background-color: #ffd800;
 }
 

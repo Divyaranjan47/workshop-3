@@ -2,7 +2,7 @@
   <nav class="menu-wrapper">
     <ul>
       <li v-for="routes in links" v-bind:key="routes.id">
-        <router-link :to="`${routes.page}`">{{routes.text}}</router-link>
+        <router-link :to="`${routes.page}`">{{ routes.text }}</router-link>
       </li>
     </ul>
   </nav>
@@ -51,7 +51,15 @@ export default {
 }
 
 .menu-wrapper ul li a {
-   color: #000;
-   text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-wrapper ul li a:hover {
+  border-bottom: 3px solid #000;
+}
+
+.router-link-exact-active {
+  border-bottom: 3px solid #000;
 }
 </style>

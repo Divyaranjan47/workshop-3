@@ -13,11 +13,10 @@ import Navigation from "../components/Navigation";
 export default {
   name: "AppHeader",
   components: {
-    "Navigation": Navigation
+    Navigation: Navigation
   }
 };
 </script>
-
 <style scoped>
 .header-wrapper {
   display: flex;
