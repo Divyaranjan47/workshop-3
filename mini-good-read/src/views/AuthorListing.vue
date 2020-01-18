@@ -2,7 +2,7 @@
   <div>
     <AppHeader />
     <div>
-    <AuthorList />
+      <AuthorList />
     </div>
     <AppFooter />
   </div>
