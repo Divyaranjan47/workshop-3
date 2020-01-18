@@ -11,13 +11,13 @@
     <p class="text-medium">
       Rated
       <star-rating
-        v-model="book.rating.avg"
+        v-model="rating"
         inline
         :star-size="15"
         :show-rating="false"
         :read-only="true"
       />
-      by {{ book.rating.total }} users
+      by {{ book.ratings.length }} users
     </p>
     <p class="book-desc text-medium">{{ book.desc }}</p>
   </article>
@@ -32,9 +32,24 @@ export default {
   props: {
     book: Object
   },
+  computed: {
+    rating() {
+      let currentRating = 0;
+      if (this.book.ratings.length > 0) {
+        const total = this.book.ratings.reduce((acc, cur) => {
+          return acc + cur.rating;
+        }, 0);
+        currentRating = total / this.book.ratings.length;
+      }
+      return currentRating;
+    }
+  },
   methods: {
     openBook() {
-      window.location.href = `/bookDescription/${this.book.id}`;
+      this.$router.push({
+        path: `/bookDescription/${this.book.id}`,
+        props: { book: this.book.title }
+      });
     }
   }
 };

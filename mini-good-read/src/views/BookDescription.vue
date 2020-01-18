@@ -10,11 +10,8 @@
           :show-rating="false"
           :read-only="true"
         />
-        <h2 class="bold-text">You don't know JS</h2>
-        <p class="desc">
-          Description is Symphony 4 Piece Right Arm Facing Sectional mnsbvFHJGV
-          VHGSFDHG GHFAGHSbkjdsb hsghjvdsjhfhgv
-        </p>
+        <h2 class="bold-text">{{ book.title }}</h2>
+        <p class="desc">{{ book.desc }}</p>
       </div>
       <section class="review">
         <h2 class="title-text bold-text">Reviews Section</h2>
@@ -41,13 +38,16 @@ import AppFooter from "@/components/AppFooter.vue";
 import AddReview from "@/components/common/AddReview.vue";
 import ReviewItems from "@/components/common/ReviewItems";
 import StarRating from "vue-star-rating";
+import bookDetails from "../assets/mock-data/bookDetails.json";
 
 export default {
   name: "bookDescription",
   data() {
     return {
       reviewList: [],
-      showReview: false
+      showReview: false,
+      id: this.$route.params.id,
+      book: {}
     };
   },
   computed: {
@@ -77,6 +77,10 @@ export default {
       this.reviewList.push(data);
       this.toggleReview();
     }
+  },
+  mounted() {
+    this.book = bookDetails[this.id];
+    this.reviewList = this.book.ratings;
   }
 };
 </script>
