@@ -10,7 +10,6 @@
 
 <script>
 import BookTile from "./common/BookTile";
-// import axios from "axios";
 import bookJson from "../assets/mock-data/books.json";
 
 export default {
@@ -21,32 +20,7 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
-      books: [
-        {
-          id: 0,
-          image: "./assets/book1.png",
-          title: "TITLE",
-          author: "AUTHOR",
-          desc: "DESCRIPTION",
-          rate: "RATING"
-        },
-        {
-          id: 1,
-          image: "./assets/book1.png",
-          title: "TITLE",
-          author: "AUTHOR",
-          desc: "DESCRIPTION",
-          rate: "RATING"
-        },
-        {
-          id: 2,
-          image: "./assets/book1.png",
-          title: "TITLE",
-          author: "AUTHOR",
-          desc: "DESCRIPTION",
-          rate: "RATING"
-        }
-      ]
+      books: []
     };
   },
   mounted() {

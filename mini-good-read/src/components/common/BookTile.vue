@@ -47,8 +47,7 @@ export default {
   methods: {
     openBook() {
       this.$router.push({
-        path: `/bookDescription/${this.book.id}`,
-        props: { book: this.book.title }
+        path: `/bookDescription/${this.book.id}`
       });
     }
   }
