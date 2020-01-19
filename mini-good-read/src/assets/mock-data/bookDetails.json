@@ -1,0 +1,68 @@
+{
+    "1": {
+        "id": 1,
+        "title": "You Don't Know JS - part 1",
+        "desc": "The book is a series of books which explores JavaScript types in greater depth",
+        "author": {
+            "id": 1,
+            "name": "Kyle Simpson"
+        },
+        "ratings": [{
+            "rating": 2,
+            "title": "Rating 1",
+            "desc": "Rating description 1"
+        },{
+            "rating": 4,
+            "title": "Rating 2",
+            "desc": "Rating description 3"
+        },{
+            "rating": 3,
+            "title": "Rating 3",
+            "desc": "Rating description 3"
+        }]
+    },
+    "2": {
+        "id": 2,
+        "title": "You Don't Know JS - part 2",
+        "desc": "The book is a series of books which explores JavaScript types in greater depth",
+        "author": {
+          "id": 1,
+          "name": "Kyle Simpson"
+        },
+        "ratings": [{
+          "rating": 2,
+          "title": "Rating 1",
+          "desc": "Rating description 1"
+        },{
+          "rating": 4,
+          "title": "Rating 2",
+          "desc": "Rating description 3"
+        },{
+          "rating": 3,
+          "title": "Rating 3",
+          "desc": "Rating description 3"
+        }]
+    },
+    "3": {
+        "id": 3,
+        "title": "You Don't Know JS - part 3",
+        "desc": "The book is a series of books which explores JavaScript types in greater depth",
+        "author": {
+          "id": 1,
+          "name": "Kyle Simpson"
+        },
+        "ratings": [{
+          "rating": 2,
+          "title": "Rating 1",
+          "desc": "Rating description 1"
+        },{
+          "rating": 4,
+          "title": "Rating 2",
+          "desc": "Rating description 3"
+        },{
+          "rating": 3,
+          "title": "Rating 3",
+          "desc": "Rating description 3"
+        }]
+    }
+}

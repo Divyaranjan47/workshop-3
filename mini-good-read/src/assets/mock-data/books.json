@@ -7,10 +7,19 @@
         "id": 1,
         "name": "Kyle Simpson"
       },
-      "rating": {
-        "avg": 4,
-        "total": 200
-      }
+      "ratings": [{
+        "rating": 2,
+        "title": "Rating 1",
+        "desc": "Rating description 1"
+      },{
+        "rating": 4,
+        "title": "Rating 2",
+        "desc": "Rating description 3"
+      },{
+        "rating": 3,
+        "title": "Rating 3",
+        "desc": "Rating description 3"
+      }]
     },
     {
       "id": 2,
@@ -20,10 +29,19 @@
         "id": 1,
         "name": "Kyle Simpson"
       },
-      "rating": {
-        "avg": 3,
-        "total": 300
-      }
+      "ratings": [{
+        "rating": 2,
+        "title": "Rating 1",
+        "desc": "Rating description 1"
+      },{
+        "rating": 4,
+        "title": "Rating 2",
+        "desc": "Rating description 3"
+      },{
+        "rating": 3,
+        "title": "Rating 3",
+        "desc": "Rating description 3"
+      }]
     },
     {
       "id": 3,
@@ -33,9 +51,18 @@
         "id": 1,
         "name": "Kyle Simpson"
       },
-      "rating": {
-        "avg": 3.5,
-        "total": 176
-      }
+      "ratings": [{
+        "rating": 2,
+        "title": "Rating 1",
+        "desc": "Rating description 1"
+      },{
+        "rating": 4,
+        "title": "Rating 2",
+        "desc": "Rating description 3"
+      },{
+        "rating": 3,
+        "title": "Rating 3",
+        "desc": "Rating description 3"
+      }]
     }
 ]
