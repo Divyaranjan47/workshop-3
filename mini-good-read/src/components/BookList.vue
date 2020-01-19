@@ -2,7 +2,7 @@
   <div class="container">
     <div class="bookslist">
       <div class="listItem" v-for="book in books" v-bind:key="book.id">
-        <BookTile :book="book" />
+        <BookTile :book="book" :isBook="true" />
       </div>
     </div>
   </div>
