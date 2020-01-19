@@ -2,7 +2,12 @@
   <section class="TopSeller">
     <h2 class="text-bold header">Top sellers of 2019</h2>
     <div class="flex-container">
-      <BookTile :book="book" v-for="book in books" :key="book.id" />
+      <BookTile
+        :book="book"
+        v-for="book in books"
+        :key="book.id"
+        :isBook="true"
+      />
     </div>
   </section>
 </template>

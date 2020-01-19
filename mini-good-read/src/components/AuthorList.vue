@@ -1,45 +1,31 @@
 <template>
   <div class="container">
-    <div v-for="author in authors" v-bind:key="author.id">
-      <div class="bookslist">
-        <div class="listItems">
-          <router-link
-            :to="{ name: 'authorDescription', params: { id: author.id } }"
-          >
-            <img alt="" src="../assets/book1.png" />
-          </router-link>
-        </div>
-        <div class="details">
-          <ul>
-            <li>{{ author.name }}</li>
-          </ul>
-        </div>
+    <div class="bookslist">
+      <div class="listItem" v-for="author in authors" v-bind:key="author.id">
+        <BookTile :book="author" />
       </div>
-      <hr />
     </div>
   </div>
 </template>
 
 <script>
+import BookTile from "./common/BookTile";
+// import axios from "axios";
+import authorJson from "../assets/mock-data/authors.json";
+
 export default {
-  name: "AuthorList",
+  name: "BookList",
+  components: {
+    BookTile
+  },
   data() {
     return {
-      authors: [
-        {
-          id: 0,
-          name: "AUTHOR"
-        },
-        {
-          id: 1,
-          name: "AUTHOR"
-        },
-        {
-          id: 2,
-          name: "AUTHOR"
-        }
-      ]
+      publicPath: process.env.BASE_URL,
+      authors: []
     };
+  },
+  mounted() {
+    this.authors = authorJson;
   }
 };
 </script>
@@ -54,6 +40,7 @@ export default {
   margin: auto;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
 .details ul li {
@@ -61,7 +48,7 @@ export default {
   font-size: 20px;
 }
 
-.listItems {
+.listItem {
   display: inline-block;
   width: 30%;
   margin: 0 1rem;

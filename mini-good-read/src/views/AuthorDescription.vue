@@ -3,15 +3,11 @@
     <AppHeader />
     <div class="author-desc">
       <img src="../assets/author.png" class="auth-img" alt="" />
-      <StarRating
-        v-model="author.rating"
-        :star-size="25"
-        :show-rating="false"
-        :read-only="true"
-      />
       <h2 class="bold-text">{{ author.name }}</h2>
-      <p>Description</p>
+      <p class="desc">{{ author.desc }}</p>
     </div>
+    <h2 class="bold-text head">{{ author.name }}'s books</h2>
+    <BookList />
     <AppFooter />
   </div>
 </template>
@@ -20,22 +16,24 @@
 // @ is an alias to /src
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
-import StarRating from "vue-star-rating";
+import BookList from "@/components/BookList.vue";
 
 export default {
   name: "authorDescription",
   data() {
     return {
       author: {
-        name: "Kyle simpson",
-        rating: 3
+        name: "Scott Issac",
+        desc:
+          "He is a software architect who is best known for the development of Dynamic HTML, which is at the core of what is commonly termed Ajax.",
+        totalBooks: 2
       }
     };
   },
   components: {
     AppHeader,
     AppFooter,
-    StarRating
+    BookList
   }
 };
 </script>
@@ -49,7 +47,14 @@ export default {
   text-align: center;
   margin: 20px;
 }
-.vue-star-rating {
-  justify-content: space-around;
+.desc {
+  font-size: 24px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.head {
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 </style>

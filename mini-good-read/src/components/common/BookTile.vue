@@ -1,14 +1,16 @@
 <template>
   <article class="BookTile" @click="openBook">
-    <img src="../../assets/book-cover.png" alt="" />
+    <img src="../../assets/book-cover.png" alt="" v-if="isBook" />
+    <img src="../../assets/author.png" alt="" v-else />
     <h3 class="text-bold title">{{ book.title }}</h3>
-    <p class="desc text-medium">
+    <p class="desc text-medium" v-if="isBook">
       By
       <a :href="'/authorDescription/' + book.author.id">{{
         book.author.name
       }}</a>
     </p>
-    <p class="text-medium">
+    <p class="desc text-medium" v-else>Total Books: {{ book.totalBooks }}</p>
+    <p class="text-medium" v-if="isBook">
       Rated
       <star-rating
         v-model="book.rating.avg"
@@ -30,11 +32,14 @@ export default {
     StarRating
   },
   props: {
-    book: Object
+    book: Object,
+    isBook: Boolean
   },
   methods: {
     openBook() {
-      window.location.href = `/bookDescription/${this.book.id}`;
+      window.location.href = this.isBook
+        ? `/bookDescription/${this.book.id}`
+        : `/authorDescription/${this.book.id}`;
     }
   }
 };
