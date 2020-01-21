@@ -3,18 +3,12 @@
     <div class="logo-wrapper">
       <img alt="Mini Good Read Logo" src="../assets/logo.png" />
     </div>
-    <Navigation />
   </header>
 </template>
 
 <script>
-import Navigation from "../components/Navigation";
-
 export default {
-  name: "AppHeader",
-  components: {
-    Navigation: Navigation
-  }
+  name: "AppHeader"
 };
 </script>
 <style scoped>
