@@ -24,7 +24,11 @@
         >
           Write A Review
         </button>
-        <AddReview v-if="showReview" v-on:addReview="addReview" />
+        <AddReview
+          v-if="showReview"
+          v-on:addReview="addReview"
+          v-on:closeReview="toggleReview"
+        />
       </section>
     </div>
     <AppFooter />
@@ -59,7 +63,7 @@ export default {
         }, 0);
         currentRating = total / this.reviewList.length;
       }
-      return currentRating;
+      return Math.round(currentRating);
     }
   },
   components: {

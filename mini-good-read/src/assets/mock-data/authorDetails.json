@@ -1,0 +1,20 @@
+{
+    "1": {
+        "id": 1,
+        "title": "Kyle Simpson",
+        "desc": "He is an evangelist of the open web, passionate about all things JavaScript.",
+        "totalBooks": 3
+    },
+    "2": {
+        "id": 2,
+        "title": "Scott Issac",
+        "desc": "He is a software architect who is best known for the development of Dynamic HTML, which is at the core of what is commonly termed Ajax.",
+        "totalBooks": 2
+    },
+    "3": {
+        "id": 3,
+        "title": "John Ressig",
+        "desc": "He is an American software engineer and entrepreneur, best known as the creator and lead developer of the jQuery JavaScript library",
+        "totalBooks": 5
+    }
+}

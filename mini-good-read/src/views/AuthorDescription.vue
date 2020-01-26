@@ -3,11 +3,11 @@
     <AppHeader />
     <div class="author-desc">
       <img src="../assets/author.png" class="auth-img" alt="" />
-      <h2 class="bold-text">{{ author.name }}</h2>
+      <h2 class="bold-text">{{ author.title }}</h2>
       <p class="desc">{{ author.desc }}</p>
     </div>
-    <h2 class="bold-text head">{{ author.name }}'s books</h2>
-    <BookList />
+    <h2 class="bold-text head">{{ author.title }}'s books</h2>
+    <BookList :filterBy="author" />
     <AppFooter />
   </div>
 </template>
@@ -17,17 +17,13 @@
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import BookList from "@/components/BookList.vue";
+import authorDetails from "../assets/mock-data/authorDetails.json";
 
 export default {
   name: "authorDescription",
   data() {
     return {
-      author: {
-        name: "Scott Issac",
-        desc:
-          "He is a software architect who is best known for the development of Dynamic HTML, which is at the core of what is commonly termed Ajax.",
-        totalBooks: 2
-      }
+      author: authorDetails[this.$route.params.id] || {}
     };
   },
   components: {

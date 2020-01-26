@@ -14,6 +14,9 @@ import bookJson from "../assets/mock-data/books.json";
 
 export default {
   name: "BookList",
+  props: {
+    filterBy: Object
+  },
   components: {
     BookTile
   },
@@ -25,6 +28,9 @@ export default {
   },
   mounted() {
     this.books = bookJson;
+    if (this.filterBy) {
+      this.books = bookJson.filter(e => this.filterBy.id === e.author.id);
+    }
   }
 };
 </script>
@@ -39,7 +45,7 @@ export default {
   margin: auto;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 .details ul li {

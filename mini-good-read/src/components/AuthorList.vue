@@ -40,7 +40,7 @@ export default {
   margin: auto;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 .details ul li {

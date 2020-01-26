@@ -48,8 +48,8 @@
         "title": "You Don't Know JS - part 3",
         "desc": "The book is a series of books which explores JavaScript types in greater depth",
         "author": {
-          "id": 1,
-          "name": "Kyle Simpson"
+          "id": 2,
+          "name": "Scott Issac"
         },
         "ratings": [{
           "rating": 2,

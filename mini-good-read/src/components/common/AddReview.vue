@@ -35,6 +35,9 @@
       ></textarea>
     </div>
     <button type="submit" class="submit-btn">Submit</button>
+    <button type="button" class="submit-btn close" @click="closeAddReview">
+      close
+    </button>
   </form>
 </template>
 <script>
@@ -58,6 +61,12 @@ export default {
       e.stopPropagation();
       this.$emit("addReview", this.ratingDetails);
       this.ratingDetails = {};
+    },
+    closeAddReview() {
+      this.rating = 0;
+      this.title = "";
+      this.desc = "";
+      this.$emit("closeReview");
     }
   }
 };
@@ -96,5 +105,8 @@ export default {
   font-size: 16px;
   border: 0;
   border-radius: 2px;
+}
+.close {
+  margin: 0 10px;
 }
 </style>

@@ -5,7 +5,7 @@
       {{ appDesc }}
       <a href="https://vuefest-2020.surge.sh/">Know more..</a>
     </p>
-    <TopSeller />
+    <!-- <TopSeller />
     <section class="listing-container">
       <p class="browse-by">{{ browseBy }}</p>
       <div class="listing-categories">
@@ -16,17 +16,17 @@
           <img src="../assets/author-listing.png" alt="Author Listing Icon" />
         </router-link>
       </div>
-    </section>
+    </section> -->
   </article>
 </template>
 
 <script>
-import TopSeller from "./TopSeller";
+// import TopSeller from "./TopSeller";
 
 export default {
   name: "LandingPage",
   components: {
-    TopSeller
+    // TopSeller
   },
   data() {
     return {
