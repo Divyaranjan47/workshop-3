@@ -22,12 +22,12 @@ export default {
         {
           id: 1,
           text: "Books",
-          page: "/Books"
+          page: "/books"
         },
         {
           id: 2,
           text: "Authors",
-          page: "/Authors"
+          page: "/authors"
         }
       ]
     };

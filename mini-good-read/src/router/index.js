@@ -1,10 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import BookListing from "../views/BookListing.vue";
-import AuthorListing from "../views/AuthorListing.vue";
+// import BookListing from "../views/BookListing.vue";
+import BookList from "@/components/BookList.vue";
+// import AuthorListing from "../views/AuthorListing.vue";
 import BookDescription from "../views/BookDescription.vue";
 import AuthorDescription from "../views/AuthorDescription.vue";
+import AuthorList from "@/components/AuthorList.vue";
 
 Vue.use(VueRouter);
 
@@ -17,12 +19,12 @@ const routes = [
   {
     path: "/books",
     name: "books",
-    component: BookListing
+    component: BookList
   },
   {
     path: "/authors",
     name: "authors",
-    component: AuthorListing
+    component: AuthorList
   },
   {
     path: "/bookDescription/:id",
