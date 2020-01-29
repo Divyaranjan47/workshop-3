@@ -21,9 +21,9 @@
         />
       </div>
       <div class="item">
-        <label for="review" class="label-text"> Description </label>
+        <label for="description" class="label-text"> Description </label>
         <textarea
-          name="review"
+          name="description"
           required="required"
           placeholder="Short description of book"
           class="input-field text-area"
