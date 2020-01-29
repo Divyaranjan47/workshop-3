@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppHeader />
     <div class="author-desc">
       <img src="../assets/author.png" class="auth-img" alt="" />
       <h2 class="bold-text">{{ author.title }}</h2>
@@ -14,8 +13,6 @@
 
 <script>
 // @ is an alias to /src
-import AppHeader from "@/components/AppHeader.vue";
-import AppFooter from "@/components/AppFooter.vue";
 import BookList from "@/components/BookList.vue";
 import authorDetails from "../assets/mock-data/authorDetails.json";
 
@@ -27,8 +24,6 @@ export default {
     };
   },
   components: {
-    AppHeader,
-    AppFooter,
     BookList
   }
 };
