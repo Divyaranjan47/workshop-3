@@ -1,10 +1,10 @@
 <template>
   <div>
-    <AppHeader />
     <div class="author-desc">
       <img src="../assets/author.png" class="auth-img" alt="" />
       <h2 class="bold-text">{{ author.title }}</h2>
       <p class="desc">{{ author.desc }}</p>
+      <AddBookForm />
     </div>
     <h2 class="bold-text head">{{ author.title }}'s books</h2>
     <BookList :filterBy="author" />
@@ -14,10 +14,9 @@
 
 <script>
 // @ is an alias to /src
-import AppHeader from "@/components/AppHeader.vue";
-import AppFooter from "@/components/AppFooter.vue";
 import BookList from "@/components/BookList.vue";
 import authorDetails from "../assets/mock-data/authorDetails.json";
+import AddBookForm from "@/components/AddBookForm.vue";
 
 export default {
   name: "authorDescription",
@@ -27,9 +26,8 @@ export default {
     };
   },
   components: {
-    AppHeader,
-    AppFooter,
-    BookList
+    BookList,
+    AddBookForm
   }
 };
 </script>
@@ -37,6 +35,7 @@ export default {
 .author-desc {
   text-align: center;
   margin: 20px 0;
+  position: relative;
 }
 .bold-text {
   font-size: 24px;

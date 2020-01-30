@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppHeader />
     <div class="book-container">
       <div class="book-desc">
         <img src="../assets/book-cover.png" class="book-img" alt="" />
@@ -31,14 +30,11 @@
         />
       </section>
     </div>
-    <AppFooter />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import AppHeader from "@/components/AppHeader.vue";
-import AppFooter from "@/components/AppFooter.vue";
 import AddReview from "@/components/common/AddReview.vue";
 import ReviewItems from "@/components/common/ReviewItems";
 import StarRating from "vue-star-rating";
@@ -67,8 +63,6 @@ export default {
     }
   },
   components: {
-    AppHeader,
-    AppFooter,
     StarRating,
     AddReview,
     ReviewItems
